@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Spam Classifier</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        textarea {
+            width: 400px;
+            height: 120px;
+        }
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Email Spam Classifier</h2>
+    <form method="post">
+        <textarea name="email" placeholder="Paste your email text here">{{ email_text }}</textarea><br>
+        <button type="submit">Classify</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Result: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
